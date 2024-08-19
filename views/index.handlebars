@@ -1,0 +1,25 @@
+<h2>Pagina de post</h2>
+<div class="jumbotron">
+  <h1 class="display-4">Bem vindo ao blog  do nodejs</h1>
+  <p class="lead">seja bem vindo ao blog nodejs aqui vc podera criar formularios e postagens que tal começar?</p>
+  <hr class="my-4">
+  <p>clique nesse botão para criar seu formulario , selecione sua categoria ou veja seu ultimo formulário criado</p>
+  <a class="btn btn-primary btn-lg" href="/admin/categorias" role="button" >Crie um formulario</a>
+</div>
+
+<hr>
+
+<h2>Postagens recentes</h2>
+
+{{#each postagens}}
+<div class="card">
+    <div class="card-body">
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+    </div>
+</div>
+
+{{else}} 
+<br>
+  <h5>Nenhuma postagem</h5>
+{{/each}}
